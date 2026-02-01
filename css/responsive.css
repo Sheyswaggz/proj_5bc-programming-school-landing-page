@@ -1,0 +1,529 @@
+/* ============================================
+   Responsive Design - Mobile-First Approach
+   ============================================ */
+
+/* ============================================
+   Base Mobile Styles (< 768px)
+   Already defined in base.css and components.css
+   ============================================ */
+
+/* ============================================
+   Tablet Breakpoint (768px and above)
+   ============================================ */
+
+@media (min-width: 768px) {
+  /* Typography adjustments for tablet */
+  :root {
+    --font-size-base: 1.0625rem;
+  }
+
+  /* Navigation enhancements */
+  .nav-container {
+    padding: var(--space-4) var(--space-8);
+  }
+
+  .nav-menu {
+    gap: var(--space-8);
+  }
+
+  .nav-menu a {
+    font-size: var(--font-size-lg);
+  }
+
+  /* Hero section tablet layout */
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    min-height: 70vh;
+    padding: var(--space-20) var(--space-8);
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-12);
+  }
+
+  .hero-description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .hero-placeholder {
+    max-width: 500px;
+  }
+
+  /* Button sizing for tablet */
+  .btn {
+    padding: var(--space-4) var(--space-8);
+    font-size: var(--font-size-lg);
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Section spacing adjustments */
+  .section-container {
+    padding: var(--space-24) var(--space-8);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-16);
+  }
+
+  .section-header h2 {
+    margin-bottom: var(--space-8);
+  }
+
+  /* Courses grid - 2 columns on tablet */
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-10);
+  }
+
+  /* Course card enhancements */
+  .course-card {
+    padding: var(--space-8);
+  }
+
+  .course-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: var(--space-6);
+  }
+
+  /* About section tablet layout */
+  .about-content {
+    gap: var(--space-12);
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-10);
+  }
+
+  /* Contact section tablet layout */
+  .contact-content {
+    gap: var(--space-12);
+  }
+
+  .contact-form {
+    padding: var(--space-10);
+  }
+
+  /* Form input sizing for touch targets */
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="tel"],
+  .form-group select,
+  .form-group textarea {
+    padding: var(--space-4) var(--space-5);
+    min-height: 44px;
+  }
+
+  /* Footer tablet layout */
+  footer {
+    padding: var(--space-20) var(--space-8);
+  }
+
+  .footer-content {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-16);
+  }
+
+  /* Container adjustments */
+  .container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+}
+
+/* ============================================
+   Desktop Breakpoint (1024px and above)
+   ============================================ */
+
+@media (min-width: 1024px) {
+  /* Typography adjustments for desktop */
+  :root {
+    --font-size-base: 1.125rem;
+  }
+
+  /* Hero section desktop layout */
+  .hero {
+    padding: var(--space-24) var(--space-12);
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--space-16);
+  }
+
+  /* Section spacing for desktop */
+  .section-container {
+    padding: var(--space-32) var(--space-12);
+  }
+
+  /* Courses grid - 3 columns on desktop */
+  .courses-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-12);
+  }
+
+  /* About section desktop layout */
+  .about-content {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+
+  /* Contact section desktop layout */
+  .contact-content {
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-16);
+  }
+
+  /* Footer desktop layout */
+  footer {
+    padding: var(--space-24) var(--space-12);
+  }
+
+  /* Container adjustments */
+  .container {
+    padding-left: var(--space-12);
+    padding-right: var(--space-12);
+  }
+}
+
+/* ============================================
+   Flexible Images and Media
+   ============================================ */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive iframe embeds */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================
+   Touch-Friendly Tap Targets (44x44px minimum)
+   ============================================ */
+
+button,
+a,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+.btn,
+.nav-menu a,
+.social-list a {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form controls touch targets */
+input[type="checkbox"],
+input[type="radio"] {
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+/* ============================================
+   Responsive Typography Scaling
+   ============================================ */
+
+@media (min-width: 768px) {
+  h1 {
+    margin-bottom: var(--space-12);
+  }
+
+  h2 {
+    margin-bottom: var(--space-8);
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    margin-bottom: var(--space-16);
+  }
+
+  h2 {
+    margin-bottom: var(--space-10);
+  }
+}
+
+/* ============================================
+   Responsive Grid Utilities
+   ============================================ */
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-10);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-12);
+  }
+}
+
+/* ============================================
+   Responsive Spacing Utilities
+   ============================================ */
+
+@media (min-width: 768px) {
+  .tablet\:p-8 {
+    padding: var(--space-8);
+  }
+
+  .tablet\:mt-12 {
+    margin-top: var(--space-12);
+  }
+
+  .tablet\:mb-12 {
+    margin-bottom: var(--space-12);
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktop\:p-12 {
+    padding: var(--space-12);
+  }
+
+  .desktop\:mt-16 {
+    margin-top: var(--space-16);
+  }
+
+  .desktop\:mb-16 {
+    margin-bottom: var(--space-16);
+  }
+}
+
+/* ============================================
+   Responsive Display Utilities
+   ============================================ */
+
+.mobile-only {
+  display: block;
+}
+
+.tablet-up {
+  display: none;
+}
+
+.desktop-up {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .tablet-up {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktop-up {
+    display: block;
+  }
+}
+
+/* ============================================
+   Responsive Text Alignment
+   ============================================ */
+
+@media (min-width: 768px) {
+  .tablet\:text-left {
+    text-align: left;
+  }
+
+  .tablet\:text-center {
+    text-align: center;
+  }
+
+  .tablet\:text-right {
+    text-align: right;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktop\:text-left {
+    text-align: left;
+  }
+
+  .desktop\:text-center {
+    text-align: center;
+  }
+
+  .desktop\:text-right {
+    text-align: right;
+  }
+}
+
+/* ============================================
+   Responsive Flexbox Utilities
+   ============================================ */
+
+@media (min-width: 768px) {
+  .tablet\:flex-row {
+    flex-direction: row;
+  }
+
+  .tablet\:flex-col {
+    flex-direction: column;
+  }
+
+  .tablet\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .tablet\:justify-center {
+    justify-content: center;
+  }
+
+  .tablet\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .tablet\:items-start {
+    align-items: flex-start;
+  }
+
+  .tablet\:items-center {
+    align-items: center;
+  }
+
+  .tablet\:items-end {
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktop\:flex-row {
+    flex-direction: row;
+  }
+
+  .desktop\:flex-col {
+    flex-direction: column;
+  }
+
+  .desktop\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .desktop\:justify-center {
+    justify-content: center;
+  }
+
+  .desktop\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .desktop\:items-start {
+    align-items: flex-start;
+  }
+
+  .desktop\:items-center {
+    align-items: center;
+  }
+
+  .desktop\:items-end {
+    align-items: flex-end;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .no-print,
+  nav,
+  footer,
+  .hero-actions,
+  .btn {
+    display: none !important;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+}
