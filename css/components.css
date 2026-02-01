@@ -78,7 +78,7 @@
 }
 
 .btn-primary.success::before {
-  content: '✓';
+  content: '\2713';
   position: absolute;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
@@ -208,7 +208,7 @@
 }
 
 .course-features li::before {
-  content: "✓";
+  content: "\2713";
   position: absolute;
   left: 0;
   color: var(--color-accent-600);
@@ -695,7 +695,7 @@ header {
 }
 
 .about-features li::before {
-  content: "→";
+  content: "\2192";
   position: absolute;
   left: 0;
   color: var(--color-primary-600);
@@ -713,6 +713,14 @@ header {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-16);
   }
+}
+
+/* ============================================
+   Courses Section
+   ============================================ */
+
+.courses {
+  background-color: var(--color-background);
 }
 
 /* ============================================
