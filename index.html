@@ -97,6 +97,25 @@
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
   
+  <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle mobile menu">
+    <span class="hamburger-icon" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+  
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-nav-overlay"></div>
+    <div class="mobile-nav-content">
+      <ul role="list" class="mobile-nav-menu">
+        <li><a href="#courses" data-smooth-scroll>Courses</a></li>
+        <li><a href="#about" data-smooth-scroll>About</a></li>
+        <li><a href="#contact" data-smooth-scroll>Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
   <header role="banner">
     <nav role="navigation" aria-label="Main navigation">
       <div class="nav-container">
@@ -106,16 +125,16 @@
           </a>
         </div>
         <ul role="list" class="nav-menu">
-          <li><a href="#courses" aria-label="View our courses">Courses</a></li>
-          <li><a href="#about" aria-label="Learn about us">About</a></li>
-          <li><a href="#contact" aria-label="Contact us">Contact</a></li>
+          <li><a href="#courses" aria-label="View our courses" data-smooth-scroll>Courses</a></li>
+          <li><a href="#about" aria-label="Learn about us" data-smooth-scroll>About</a></li>
+          <li><a href="#contact" aria-label="Contact us" data-smooth-scroll>Contact</a></li>
         </ul>
       </div>
     </nav>
   </header>
   
   <main id="main" role="main">
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" aria-labelledby="hero-title" data-animate-section>
       <div class="hero-content">
         <h1 id="hero-title">Programming School</h1>
         <p class="hero-tagline">Transform Your Future Through Code</p>
@@ -123,8 +142,8 @@
           Join thousands of successful graduates who've launched their tech careers with our expert-led programming courses. Learn in-demand skills, build real-world projects, and get personalized career support every step of the way.
         </p>
         <div class="hero-actions">
-          <a href="#courses" class="btn btn-primary" role="button" aria-label="Start your programming journey">Start Your Journey</a>
-          <a href="#about" class="btn btn-secondary" role="button" aria-label="Learn more about Programming School">Learn More</a>
+          <a href="#courses" class="btn btn-primary" role="button" aria-label="Start your programming journey" data-smooth-scroll>Start Your Journey</a>
+          <a href="#about" class="btn btn-secondary" role="button" aria-label="Learn more about Programming School" data-smooth-scroll>Learn More</a>
         </div>
       </div>
       <div class="hero-image" aria-hidden="true">
@@ -132,7 +151,7 @@
       </div>
     </section>
     
-    <section id="courses" class="courses" aria-labelledby="courses-title">
+    <section id="courses" class="courses" aria-labelledby="courses-title" data-animate-section>
       <div class="section-container">
         <header class="section-header">
           <h2 id="courses-title">Our Courses</h2>
@@ -142,7 +161,7 @@
         </header>
         
         <div class="courses-grid">
-          <article class="course-card" aria-labelledby="course-1-title">
+          <article class="course-card" aria-labelledby="course-1-title" data-animate-card>
             <div class="course-icon" aria-hidden="true">
               <span class="icon-placeholder">🌐</span>
             </div>
@@ -159,11 +178,11 @@
               <li><strong>Technologies:</strong> HTML, CSS, JavaScript, React, Node.js</li>
             </ul>
             <footer class="course-footer">
-              <a href="#contact" class="btn btn-outline" role="button">Learn More</a>
+              <a href="#contact" class="btn btn-outline" role="button" data-smooth-scroll>Learn More</a>
             </footer>
           </article>
           
-          <article class="course-card" aria-labelledby="course-2-title">
+          <article class="course-card" aria-labelledby="course-2-title" data-animate-card>
             <div class="course-icon" aria-hidden="true">
               <span class="icon-placeholder">🐍</span>
             </div>
@@ -180,11 +199,11 @@
               <li><strong>Technologies:</strong> Python, Django, Flask, NumPy, Pandas</li>
             </ul>
             <footer class="course-footer">
-              <a href="#contact" class="btn btn-outline" role="button">Learn More</a>
+              <a href="#contact" class="btn btn-outline" role="button" data-smooth-scroll>Learn More</a>
             </footer>
           </article>
           
-          <article class="course-card" aria-labelledby="course-3-title">
+          <article class="course-card" aria-labelledby="course-3-title" data-animate-card>
             <div class="course-icon" aria-hidden="true">
               <span class="icon-placeholder">⚡</span>
             </div>
@@ -201,11 +220,11 @@
               <li><strong>Technologies:</strong> JavaScript, ES6+, DOM, APIs, Async/Await</li>
             </ul>
             <footer class="course-footer">
-              <a href="#contact" class="btn btn-outline" role="button">Learn More</a>
+              <a href="#contact" class="btn btn-outline" role="button" data-smooth-scroll>Learn More</a>
             </footer>
           </article>
           
-          <article class="course-card" aria-labelledby="course-4-title">
+          <article class="course-card" aria-labelledby="course-4-title" data-animate-card>
             <div class="course-icon" aria-hidden="true">
               <span class="icon-placeholder">📊</span>
             </div>
@@ -222,11 +241,11 @@
               <li><strong>Technologies:</strong> Python, Pandas, Matplotlib, Scikit-learn, SQL</li>
             </ul>
             <footer class="course-footer">
-              <a href="#contact" class="btn btn-outline" role="button">Learn More</a>
+              <a href="#contact" class="btn btn-outline" role="button" data-smooth-scroll>Learn More</a>
             </footer>
           </article>
           
-          <article class="course-card" aria-labelledby="course-5-title">
+          <article class="course-card" aria-labelledby="course-5-title" data-animate-card>
             <div class="course-icon" aria-hidden="true">
               <span class="icon-placeholder">📱</span>
             </div>
@@ -243,11 +262,11 @@
               <li><strong>Technologies:</strong> React Native, Flutter, iOS, Android</li>
             </ul>
             <footer class="course-footer">
-              <a href="#contact" class="btn btn-outline" role="button">Learn More</a>
+              <a href="#contact" class="btn btn-outline" role="button" data-smooth-scroll>Learn More</a>
             </footer>
           </article>
           
-          <article class="course-card" aria-labelledby="course-6-title">
+          <article class="course-card" aria-labelledby="course-6-title" data-animate-card>
             <div class="course-icon" aria-hidden="true">
               <span class="icon-placeholder">💻</span>
             </div>
@@ -264,14 +283,14 @@
               <li><strong>Technologies:</strong> Algorithms, Data Structures, System Design</li>
             </ul>
             <footer class="course-footer">
-              <a href="#contact" class="btn btn-outline" role="button">Learn More</a>
+              <a href="#contact" class="btn btn-outline" role="button" data-smooth-scroll>Learn More</a>
             </footer>
           </article>
         </div>
       </div>
     </section>
     
-    <section id="about" class="about" aria-labelledby="about-title">
+    <section id="about" class="about" aria-labelledby="about-title" data-animate-section>
       <div class="section-container">
         <header class="section-header">
           <h2 id="about-title">About Programming School</h2>
@@ -333,7 +352,7 @@
           </header>
           
           <div class="testimonials-grid">
-            <article class="testimonial-card">
+            <article class="testimonial-card" data-animate-card>
               <div class="testimonial-header">
                 <img 
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=faces" 
@@ -355,7 +374,7 @@
               </blockquote>
             </article>
             
-            <article class="testimonial-card">
+            <article class="testimonial-card" data-animate-card>
               <div class="testimonial-header">
                 <img 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces" 
@@ -377,7 +396,7 @@
               </blockquote>
             </article>
             
-            <article class="testimonial-card">
+            <article class="testimonial-card" data-animate-card>
               <div class="testimonial-header">
                 <img 
                   src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=faces" 
@@ -407,15 +426,15 @@
           </header>
           
           <div class="stats-grid">
-            <div class="stat-item">
+            <div class="stat-item" data-animate-card>
               <strong class="stat-number">500+</strong>
               <span class="stat-label">Graduates</span>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" data-animate-card>
               <strong class="stat-number">95%</strong>
               <span class="stat-label">Job Placement Rate</span>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" data-animate-card>
               <strong class="stat-number">40%</strong>
               <span class="stat-label">Average Salary Increase</span>
             </div>
@@ -428,16 +447,16 @@
           </header>
           
           <div class="trust-badges-grid">
-            <div class="trust-badge">
+            <div class="trust-badge" data-animate-card>
               <span aria-label="Accredited Education Provider">🎓 Accredited Provider</span>
             </div>
-            <div class="trust-badge">
+            <div class="trust-badge" data-animate-card>
               <span aria-label="Industry Partner">🤝 Industry Partners</span>
             </div>
-            <div class="trust-badge">
+            <div class="trust-badge" data-animate-card>
               <span aria-label="Award Winning Programs">🏆 Award Winning</span>
             </div>
-            <div class="trust-badge">
+            <div class="trust-badge" data-animate-card>
               <span aria-label="Certified Instructors">✓ Certified Instructors</span>
             </div>
           </div>
@@ -445,7 +464,7 @@
       </div>
     </section>
     
-    <section id="contact" class="contact" aria-labelledby="contact-title">
+    <section id="contact" class="contact" aria-labelledby="contact-title" data-animate-section>
       <div class="section-container">
         <header class="section-header">
           <h2 id="contact-title">Get in Touch</h2>
@@ -455,7 +474,7 @@
         </header>
         
         <div class="contact-content">
-          <form class="contact-form" method="POST" action="/submit-contact" novalidate aria-label="Contact form">
+          <form class="contact-form" method="POST" action="/submit-contact" novalidate aria-label="Contact form" data-validate-form>
             <div class="form-group">
               <label for="name">
                 Full Name
@@ -469,6 +488,7 @@
                 aria-required="true"
                 autocomplete="name"
                 placeholder="John Doe"
+                data-validate="name"
               >
             </div>
             
@@ -486,6 +506,7 @@
                 autocomplete="email"
                 inputmode="email"
                 placeholder="john@example.com"
+                data-validate="email"
               >
             </div>
             
@@ -500,6 +521,7 @@
                 autocomplete="tel"
                 inputmode="tel"
                 placeholder="+1 (555) 123-4567"
+                data-validate="phone"
               >
             </div>
             
@@ -531,10 +553,11 @@
                 required
                 aria-required="true"
                 placeholder="Tell us about your goals and how we can help..."
+                data-validate="message"
               ></textarea>
             </div>
             
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary" data-morphing-button>Send Message</button>
           </form>
           
           <div class="contact-info">
@@ -615,9 +638,9 @@
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul role="list">
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#courses" data-smooth-scroll>Courses</a></li>
+            <li><a href="#about" data-smooth-scroll>About</a></li>
+            <li><a href="#contact" data-smooth-scroll>Contact</a></li>
             <li><a href="/privacy">Privacy Policy</a></li>
             <li><a href="/terms">Terms of Service</a></li>
           </ul>
@@ -639,5 +662,9 @@
       </div>
     </div>
   </footer>
+  
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/interactions.js" defer></script>
 </body>
 </html>
